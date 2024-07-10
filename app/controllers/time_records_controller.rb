@@ -3,7 +3,7 @@ class TimeRecordsController < ApplicationController
 
   # GET /time_records or /time_records.json
   def index
-    @time_records = TimeRecord.all
+    render json: { current_time: Time.now }
   end
 
   # GET /time_records/1 or /time_records/1.json
