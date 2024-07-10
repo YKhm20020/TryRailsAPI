@@ -1,0 +1,22 @@
+<%= form_with(model: time_record) do |form| %>
+  <% if time_record.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(time_record.errors.count, "error") %> prohibited this time_record from being saved:</h2>
+
+      <ul>
+        <% time_record.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :current_time, style: "display: block" %>
+    <%= form.datetime_field :current_time %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

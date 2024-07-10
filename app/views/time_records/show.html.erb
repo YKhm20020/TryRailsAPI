@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @time_record %>
+
+<div>
+  <%= link_to "Edit this time record", edit_time_record_path(@time_record) %> |
+  <%= link_to "Back to time records", time_records_path %>
+
+  <%= button_to "Destroy this time record", @time_record, method: :delete %>
+</div>
